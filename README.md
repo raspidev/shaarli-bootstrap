@@ -49,12 +49,12 @@ Original : [sebsauvage.net](https://github.com/sebsauvage/Shaarli/)
   
 ### More feature add by Raspidev :  
  * Search by term or tags in picwall  
- * Integration of a Tag cloud 3D (http://www.goat1000.com/tagcanvas.php)  
- * Modified to bootstrap (http://getbootstrap.com/)  
+ * Integration of a Tag cloud 3D [http://www.goat1000.com/tagcanvas.php](http://www.goat1000.com/tagcanvas.php)  
+ * Modified to bootstrap [http://getbootstrap.com/](http://getbootstrap.com/)  
  * Theme responsive bootstrap compact and nice mobile design  
  * Add Font awesome  
  * Add link to go to top and go to end  
- * Add share links to twitter, facebook, google + and mail inspired by (http://effingo.be/2013/12/14/ajout-de-boutons-de-partage-social-dans-shaarli/)  
+ * Add share links to twitter, facebook, google + and mail inspired by [http://effingo.be/2013/12/14/ajout-de-boutons-de-partage-social-dans-shaarli/](http://effingo.be/2013/12/14/ajout-de-boutons-de-partage-social-dans-shaarli/)  
 
 ### Screenshot :  
 
@@ -63,7 +63,7 @@ Original : [sebsauvage.net](https://github.com/sebsauvage/Shaarli/)
  * Mobile view:  
 ![http://raspidev.fr.nf/images/screen-mobile.PNG](http://raspidev.fr.nf/images/screen-mobile.PNG)  
 
-View other at (http://raspidev.fr.nf/)  
+View other at [http://raspidev.fr.nf/](http://raspidev.fr.nf/)  
 
 ### TODO :  
  * optimization of code  
@@ -75,7 +75,7 @@ View other at (http://raspidev.fr.nf/)
 Requires php 5.1 (php 5.2 required for autocomplete.)
 
 More information on the original project page:
-http://sebsauvage.net/wiki/doku.php?id=php:shaarli
+[http://sebsauvage.net/wiki/doku.php?id=php:shaarli](http://sebsauvage.net/wiki/doku.php?id=php:shaarli)  
 
 ------------------------------------------------------------------------------
 

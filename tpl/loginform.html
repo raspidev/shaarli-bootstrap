@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>{include="includes"}</head>
+<body{if="ban_canLogin()"} onload="document.loginform.login.focus();"{/if}>
+
+	{include="page.header"}
+
+	<div id="login">
+{if="!ban_canLogin()"}
+    You have been banned from login after too many failed attempts. Try later.
+{else}
+    <form method="post" name="loginform">
+    Login: <input type="text" name="login" class="form-control" tabindex="1">
+    Password : <input type="password" class="form-control" name="password" tabindex="2">
+    <input style="margin:10 0 0 40;" type="checkbox" name="longlastingsession" id="longlastingsession"  tabindex="3"><label for="longlastingsession">&nbsp;Stay signed in (Do not check on public computers)</label><br>
+    <input type="submit" value="Login" class="btn-login" tabindex="4">
+    <input type="hidden" name="token" value="{$token}">
+    {if="$returnurl"}<input type="hidden" name="returnurl" value="{$returnurl|htmlspecialchars}">{/if}
+    </form>
+{/if}
+    </div>
+{include="page.footer"}
+</body>
+</html>

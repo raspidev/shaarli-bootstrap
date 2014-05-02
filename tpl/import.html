@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>{include="includes"}</head>
+<body onload="document.uploadform.filetoupload.focus();">
+
+	{include="page.header"}
+
+	<div id="addlink">
+	Import Netscape html bookmarks (as exported from Firefox/Chrome/Opera/delicious/diigo...) (Max: {$maxfilesize|htmlspecialchars} bytes).
+	<form method="POST" action="?do=upload" enctype="multipart/form-data" name="uploadform" id="uploadform">
+	    <input type="hidden" name="token" value="{$token}">
+	    <input type="file" class="form-control input-sm" style="width:30%" name="filetoupload" id="upfile" size="80">
+	    <input type="hidden" name="MAX_FILE_SIZE" value="{$maxfilesize|htmlspecialchars}"><br>
+	    <input type="submit" name="import_file" value="Import" class="btn-login"><br>
+	    <br><input type="checkbox" name="private" id="private"><label for="private">&nbsp;Import all links as private</label><br>
+	    <input type="checkbox" name="overwrite" id="overwrite"><label for="overwrite">&nbsp;Overwrite existing links</label>
+	</form>
+	</div>
+{include="page.footer"}
+</body>
+</html>

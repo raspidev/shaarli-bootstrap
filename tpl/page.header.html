@@ -1,0 +1,83 @@
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+{if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}
+{ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
+{else}
+      <div class="container" style="height: 56px;">
+        <div class="navbar-header">
+          <a href="?" class="navbar-brand"><img src="images/logo.png#" alt="{$shaarlititle|htmlspecialchars}" title="{$shaarlititle|htmlspecialchars}"/>{$shaarlititle|htmlspecialchars}</a>
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<i class="fa fa-chevron-down fa-lg" style="color:#A2DD42" ></i>
+          </button>
+		{if="isLoggedIn()"}<br><li class="visible-xs">&nbsp;&nbsp;&nbsp;&nbsp;<a href="?do=addlink" style="color:#A2DD42"><b>Add link</b></a></li>{/if}		  
+		</div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+			  {if="isLoggedIn()"}
+		<li class="dropdown">
+          <a role="button" data-toggle="dropdown" href="#">View</a>
+			<ul id="menu2" class="dropdown-menu" role="menu" >
+                <li><a href="?do=tagcloud">Tag cloud</a></li>
+                <li><a href="?do=picwall">Picture wall</a></li>
+                <li><a href="?do=daily">Daily</a></li>	
+			</ul>
+        </li>
+              {else}
+                <li><a href="?do=tagcloud" class="hidden-xs">Tag cloud</a></li>
+                <li><a href="?do=picwall" class="hidden-xs">Picture wall</a></li>
+                <li><a href="?do=daily" class="hidden-xs">Daily</a></li>
+          <li class="dropdown">
+		  <a role="button" data-toggle="dropdown" href="#"><i class="fa fa-rss fa-lg"></i></a>
+			<ul id="menu2" class="dropdown-menu" role="menu" >
+			    <li><a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile"><i class="fa fa-rss fa-lg"></i> RSS</a></li>
+                <li><a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile"><i class="fa fa-rss fa-lg"></i> ATOM</a></li>	
+			</ul>
+		</li>
+		<li class="dropdown visible-xs">
+          <a role="button" data-toggle="dropdown" href="#">View</a>
+			<ul id="menu2" class="dropdown-menu" role="menu" >
+                <li><a href="?do=tagcloud">Tag cloud</a></li>
+                <li><a href="?do=picwall">Picture wall</a></li>
+                <li><a href="?do=daily">Daily</a></li>
+			</ul>
+        </li>				
+				{/if}
+			  {if="isLoggedIn()"}
+          <li class="dropdown">
+		  <a role="button" data-toggle="dropdown" href="#"><i class="fa fa-rss fa-lg"></i></a>
+			<ul id="menu2" class="dropdown-menu" role="menu" >
+			    <li><a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile"><i class="fa fa-rss fa-lg"></i> RSS</a></li>
+                <li><a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile"><i class="fa fa-rss fa-lg"></i> ATOM</a></li>	
+			</ul>
+		</li>
+        <li class="dropdown">
+		  <a role="button" data-toggle="dropdown" href="#"><i class="fa fa-search fa-lg"></i></a>
+			<ul id="menu2" class="dropdown-menu" role="menu" >
+			<li><form method="GET" name="searchform" ><input class="form-control" type="text" id="searchform_value" name="searchterm" placeholder="Search"></form></li>
+			<li><form method="GET" name="tagfilter" ><input class="form-control" type="text" name="searchtags" id="tagfilter_value" placeholder="Filter by Tag"></form></li>
+			</ul>
+		</li>
+		<li><a href="?do=tools">Tools</a></li>		
+		<li class="hidden-xs"><a href="?do=addlink"><b>Add link</b></a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">	
+		<li><a href="?do=logout"><i class="fa fa-sign-out fa-lg" alt="logout" title="logout"></i></a></li>
+		</ul>
+            {else}
+          <li class="dropdown">
+		  <a role="button" data-toggle="dropdown" href="#"><i class="fa fa-search fa-lg"></i></a>
+			<ul id="menu2" class="dropdown-menu" role="menu" >
+		<li><form method="GET" name="searchform" ><input class="form-control" type="text" id="searchform_value" name="searchterm" placeholder="Search"></form></li>
+		<li><form method="GET" name="tagfilter" ><input class="form-control" type="text" name="searchtags" id="tagfilter_value" placeholder="Filter by Tag"></form></li>
+			</ul>
+		</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+					<li><a href="?do=login"><i class="fa fa-sign-in fa-lg"  alt="login" title="login"></i></a></li>
+			</ul>
+				{/if}
+		  
+		</div><!--/.navbar-collapse -->
+      </div>
+{/if}
+</div>
+<div class="clear"></div>

@@ -1,0 +1,14 @@
+<title>{$pagetitle}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<link rel="alternate" type="application/rss+xml" href="{$feedurl}?do=rss{$searchcrits}#" title="RSS Feed" />
+<link rel="alternate" type="application/atom+xml" href="{$feedurl}?do=atom{$searchcrits}#" title="ATOM Feed" />
+<link href="images/favicon.ico#" rel="shortcut icon" type="image/x-icon" />
+<link type="text/css" rel="stylesheet" href="inc/shaarli.css?version={$version|urlencode}#" />
+<link type="text/css" rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css#">
+{if condition="is_file('inc/user.css')"}<link type="text/css" rel="stylesheet" href="inc/user.css?version={$version}#" />{/if}
+{if="empty($GLOBALS['disablejquery'])"}<script src="inc/jquery.min.js#"></script><script src="inc/jquery-ui.min.js#"></script>{/if}
+{if="empty($GLOBALS['disablejquery'])"}<script src="inc/bootstrap.min.js#"></script>{/if}
+<script>$(window).scroll(function(){if($(window).scrollTop()==0){$("#scrollToTop").fadeOut("fast")}else{if($("#scrollToTop").length==0){$("body").append('<div id="scrollToTop"><a href="#"><span><i class="fa fa-arrow-up fa-5x"></i></span></a></div>')}$("#scrollToTop").fadeIn("fast")}});$("#scrollToTop a").live("click",function(a){a.preventDefault();$("html,body").animate({scrollTop:0},"slow")});</script>
+<script>$(window).scroll(function(){if($(window).scrollTop()==0){$("#scrollToEnd").fadeOut("fast")}else{if($("#scrollToEnd").length==0){$("body").append('<div id="scrollToEnd"><a href="#footerlink"><span><i class="fa fa-arrow-down fa-5x"></i></span></a></div>')}$("#scrollToEnd").fadeIn("fast")}});$("#scrollToEnd a").live("click",function(a){a.preventDefault();var the_id = $(this).attr("href");$('html, body').animate({scrollTop:$(the_id).offset().top}, 'slow');return false;});</script>

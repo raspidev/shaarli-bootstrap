@@ -12,6 +12,10 @@ It is designed to be personal (single-user), fast and handy.
 
 demo : [http://raspidev.fr.nf/](http://raspidev.fr.nf/)
 
+Code on bitbucket : [https://bitbucket.org/raspidev/shaarli-bootstrap](https://bitbucket.org/raspidev/shaarli-bootstrap)
+
+Code on github : [https://github.com/raspidev/shaarli-bootstrap](https://github.com/raspidev/shaarli-bootstrap)
+
 Original : [sebsauvage.net](https://github.com/sebsauvage/Shaarli/)
 ### Original features:  
  * Minimalist design (simple is beautiful)  

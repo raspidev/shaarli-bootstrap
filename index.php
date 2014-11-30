@@ -1204,6 +1204,7 @@ function renderPage()
 	
 		
         // Get only links which have a thumbnail.
+        $linkcountpic=0;
         foreach($links as $link)
         {
             $permalink='?'.htmlspecialchars(smallhash($link['linkdate']),ENT_QUOTES);
